@@ -13,7 +13,7 @@ Route::get('/', function () {
 });
 
 Route::get('/make-admin', function () {
-    $user = User::where('email', 'your@email.com')->first();
+    $user = User::where('email', 'putingbuhok1@gmail.com')->first();
     if ($user) {
         $user->role = 'admin';
         $user->save();
