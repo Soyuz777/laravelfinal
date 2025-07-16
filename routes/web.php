@@ -6,9 +6,20 @@ use App\Http\Controllers\BookingDashboardController;
 use App\Http\Controllers\Admin\BookingAdminController;
 use App\Http\Controllers\Admin\UserAdminController;
 use App\Http\Controllers\UserNotificationController;
+use App\Models\User;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::get('/make-admin', function () {
+    $user = User::where('email', 'your@email.com')->first();
+    if ($user) {
+        $user->role = 'admin';
+        $user->save();
+        return 'User is now admin';
+    }
+    return 'User not found';
 });
 
 // ✅ Dashboard
