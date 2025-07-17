@@ -10,19 +10,6 @@ A simple yet powerful Laravel-based booking management system with user authenti
 
 ---
 
-## 📸 Screenshots
-
-### Login / Register
-![Login](public/screenshots/login.png)
-![Register](public/screenshots/reg.png)
-### Dashboard
-![Dashboard](public/screenshots/dashboard.png)
-
-### Bookings Overview
-![Bookings](public/screenshots/bookings.png)
-
----
-
 ## 🔧 Features
 
 - ✅ User registration and login
