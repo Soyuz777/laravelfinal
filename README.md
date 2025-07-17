@@ -14,7 +14,7 @@ A simple yet powerful Laravel-based booking management system with user authenti
 
 ### Login / Register
 ![Login](public/screenshots/login.png)
-
+![Register](public/screenshots/reg.png)
 ### Dashboard
 ![Dashboard](public/screenshots/dashboard.png)
 
@@ -57,3 +57,66 @@ A simple yet powerful Laravel-based booking management system with user authenti
    git clone https://github.com/YOUR_USERNAME/laravelfinal.git
    cd laravelfinal
 
+2. Install dependencies
+
+bash
+composer install
+npm install && npm run build
+
+3. Configure environment
+
+bash
+cp .env.example .env
+php artisan key:generate
+
+3. Run migrations
+
+bash
+php artisan migrate
+
+5. Start the server
+bash
+Copy
+Edit
+php artisan serve
+
+🧪 Admin Setup
+1. Register a user through the app.
+2. Make the user admin using Tinker:
+
+bash
+php artisan tinker
+Then run:
+php
+Copy
+Edit
+$user = App\Models\User::where('email', 'youremail@example.com')->first();
+$user->role = 'admin';
+$user->save();
+
+Refresh and enjoy the admin dashboard.
+
+🛰️ Railway Deployment
+This project is deploy-ready for Railway.
+
+Post-deploy command:
+bash
+cp .env.example .env && composer install --no-dev --optimize-autoloader && php artisan key:generate && php artisan migrate --force
+Make sure to:
+
+Add the correct database environment variables from the MySQL plugin
+
+Set APP_ENV=production and APP_DEBUG=false
+
+📫 Email Setup (Optional)
+To test notifications: putingbuhok1
+
+Local: Set MAIL_MAILER=log in .env
+
+Production: Use Mailtrap, SMTP, or Gmail configuration
+
+🤝 Author
+Developed by Jansen Ofiaza
+📧 jansenofiaza12@gmail.com
+📚 ITP17 - Advanced Programming
+🏫 Universidad de Dagupan
